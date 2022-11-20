@@ -14,7 +14,7 @@ namespace ConsoleApp2.DataManagement
         {
             List<Person> personRandom = new List<Person>();
 
-            while (persons.Count() >= 0)
+            while (persons.Count() > 0)
             {
                 int rnd = rng.Next(persons.Count());
                 personRandom.Add(persons[rnd]);

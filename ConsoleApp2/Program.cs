@@ -2,6 +2,7 @@
 using ConsoleApp2.Models;
 
 Randomizer randomizer = new Randomizer();
+Mailer mailer = new Mailer();
 
 Console.WriteLine("Insert Credentials for sender email\nEmail:");
 string senderEmail = Console.ReadLine();
@@ -29,4 +30,4 @@ while (newPerson)
 
 peopleRnd = randomizer.personList(people);
 
-Console.WriteLine(peopleRnd[1]);
+mailer.Send(senderEmail, senderPassword, peopleRnd);
